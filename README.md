@@ -11,13 +11,15 @@ The minimal application is created using the official Flask tutorial available a
 
 This example is based on Python 3, we recommend to use at least python 3.6. For package management we use pip together with virtual environments.  
 
+Let's start with cloning the sample application.
+
 ```
 # clone a repo
 git clone https://github.com/trustsource/ts-python-sample
 cd ts-python-sample
 ```
 
-Now we create a virtual envorinment for the project and activate it:
+Create a virtual envorinment for the project and activate it:
 
 ```
 # create a virtual environment
@@ -44,16 +46,16 @@ python -m flask run
 
 # Scan and dependency analysis
 
-Now, we can scan the application for licenses used by all depenedcies. To scan the application using the TrustSource scanner execute the following command:
+To scan the application using the TrustSource scanner, execute the following command:
 
 ```
 # scan application
 ts-pip-plugin ./
 ```
 
-The scan results will be printed into the console. To submit the results to the [TrustSource](https://app.trustsource.io/) and execute analysis you need to register in the application first, generate and API-key and create a project. Please visit [TrustSource](https://app.trustsource.io/) for more details. 
+The scan results will be printed into the console. To submit the results to the [TrustSource](https://app.trustsource.io/) and execute analysis you need to register in the application first, generate an API-key and create a project. Please visit [TrustSource](https://app.trustsource.io/) for more details. 
 
-To submit result, please, create a TrustSource project file **ts-plugin.json** in the current directory with the following content:
+Before the submitting the result, please, create a TrustSource project file **ts-plugin.json** in the sample directory with the following content:
 
 ```
 {
@@ -63,14 +65,14 @@ To submit result, please, create a TrustSource project file **ts-plugin.json** i
 }
 ```
 
-Now you can execute the scan again using the command:
+Execute the scan again using the following command:
 
 ```
 # scan application
 ts-pip-plugin ./
 ```
 
-Now if everything is set correct you can see a message "Transfer success!". Open the web application to see results and execute analysis.
+If everything is set correctly you will see a message "Transfer success!". Open the web application to see results and execute analysis.
 
 # Contribution, Contact and Support
 Feel free to reach out to the [TrustSource Team](https://support.trustsource.io/hc/en-us/requests/new "TrustSource Knowledgebase") by dropping us a message or providing [issues](/org/ts-deepscan/issues). We 'ld love o hear your feedback to learn and improve.
